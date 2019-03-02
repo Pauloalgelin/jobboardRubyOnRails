@@ -1,4 +1,7 @@
 JobBoard::Application.routes.draw do
+  resources :jobs
+
+
   get "hello/world"
 
   # The priority is based upon order of creation:
