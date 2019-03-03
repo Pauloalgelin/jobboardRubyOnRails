@@ -1,6 +1,8 @@
 JobBoard::Application.routes.draw do
-  resources :jobs
 
+  root :to => "jobs#index"
+
+  resources :jobs
 
   get "hello/world"
 
