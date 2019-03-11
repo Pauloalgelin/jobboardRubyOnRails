@@ -6,6 +6,7 @@
 </h3>
 
 <%= simple_format job.description %>
+<%= pluralize(job.comments.size, "comment") %> |
 
 <p>
   <%= link_to 'Show', job %> |
