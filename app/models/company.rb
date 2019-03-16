@@ -1,7 +1,11 @@
 require "bcrypt"
 
 class Company < ActiveRecord::Base
-  attr_accessible :email, :password, :name
+  attr_accessible :email, :password, :name, :password_confirmation
+  validates_presence_of :email, :name, :password
+  validates_uniqueness_of :email
+  validates_length_of :password, minimum: 6
+  validates_confirmation_of :password
 
   def password=(new_password)
     @password = new_password
