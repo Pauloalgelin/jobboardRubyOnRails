@@ -1,7 +1,7 @@
 class JobsController < ApplicationController
 
   def premium
-    @jobs = Job.where(premium: true).all
+    @jobs = Job.where(premium: true).most_recent.all
   end
 
   # GET /jobs
