@@ -6,6 +6,8 @@ JobBoard::Application.routes.draw do
     post "comments", to: "comments#create"
   end
 
+  resources :companies, only: [:new, :create]
+
   delete "comments/:id", to: "comments#destroy", as: :comments_destroy
 
   get "hello/world"
