@@ -8,6 +8,9 @@ JobBoard::Application.routes.draw do
 
   resources :companies, only: [:new, :create]
 
+  get "/companies/login", to: "login#new"
+  post "/companies/login", to: "login#create"
+
   delete "comments/:id", to: "comments#destroy", as: :comments_destroy
 
   get "hello/world"
