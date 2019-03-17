@@ -12,5 +12,5 @@ class CompaniesController < ApplicationController
             render action: "new"
         end
     end
-    
+
 end
