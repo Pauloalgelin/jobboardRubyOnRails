@@ -7,7 +7,12 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+  <% if current_company %>
+    Logged as <%= current_company.name %>
+  <% else %>
+    <%= link_to "New company", new_company_path %>
+    <%= link_to "Login", companies_login_path %>
+  <% end %>
 <%= yield %>
 
 </body>
