@@ -10,6 +10,7 @@ JobBoard::Application.routes.draw do
 
   get "/companies/login", to: "login#new"
   post "/companies/login", to: "login#create"
+  get "/companies/logout", to: "login#destroy"
 
   delete "comments/:id", to: "comments#destroy", as: :comments_destroy
 

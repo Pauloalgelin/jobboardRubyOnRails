@@ -9,6 +9,7 @@
 <body>
   <% if current_company %>
     Logged as <%= current_company.name %>
+    <%= link_to "Logout", companies_logout_path %>
   <% else %>
     <%= link_to "New company", new_company_path %>
     <%= link_to "Login", companies_login_path %>
